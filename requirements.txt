@@ -1,0 +1,12 @@
+asyncio==3.4.3
+bleak==0.22.3
+colorama==0.4.6
+dbus-fast==2.24.4
+fade==0.0.9
+markdown-it-py==3.0.0
+mdurl==0.1.2
+Pygments==2.18.0
+python-dotenv==1.0.1
+rich==13.9.4
+typing_extensions==4.12.2
+PyBluez @ git+https://github.com/pybluez/pybluez.git@82cbba8a1ebd4c1e3442dfafd8581d58c50fa39e

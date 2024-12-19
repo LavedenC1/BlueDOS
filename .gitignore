@@ -1,0 +1,4 @@
+env/
+*bak
+*.bak
+__pycache__/
