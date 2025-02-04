@@ -170,7 +170,7 @@ while True:
                             print(f"{Fore.WHITE}[INFO] Found {len(writable_characteristics)} writable characteristics.{Style.RESET_ALL}")
 
                             packet_count = 0
-                            while packet_count < max_packet_count:
+                            while packet_count < int(max_packet_count):
                                 for char in writable_characteristics:
                                     fuzz_size = random.randint(fuzz_min_size, fuzz_max_size)
                                     random_data = bytearray([random.randint(0, 255) for _ in range(fuzz_size)])
@@ -237,7 +237,7 @@ while True:
             device_address = target.address
 
             loop = asyncio.get_event_loop()
-            loop.run_until_complete(fuzz_ble_device(device_address,leastSize,maxSize,packetCount))
+            loop.run_until_complete(fuzz_ble_device(device_address,int(leastSize),int(maxSize),int(packetCount)))
         elif option2 == "1":
             namet = input("Enter the temporary device name: ")
             print(f"{Fore.RED}{Style.BRIGHT}Starting attack...{Style.RESET_ALL}")
